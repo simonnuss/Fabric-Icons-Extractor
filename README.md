@@ -9,10 +9,5 @@ To use this script in Microsoft Fabric:
 3. Run the cell.
 4. Optionally: Access the SVGs locally using [OneLake File Explorer](https://learn.microsoft.com/en-us/fabric/onelake/onelake-file-explorer) or [Azure Storage Explorer](https://azure.microsoft.com/en-us/products/storage/storage-explorer).
 
-The script will:
-- Fetch the latest version of the `@fabric-msft/svg-icons` package from npm.
-- Delete and recreate any existing directory for the specified version in the lakehouse.
-- Download the package `.tgz` and extract its contents.
-
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
