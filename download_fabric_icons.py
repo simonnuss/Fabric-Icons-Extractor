@@ -19,10 +19,10 @@ latest_version = response["dist-tags"]["latest"]
 lakehouse_destination = os.path.join(lakehouse_base, f"v{latest_version}")
 tgz_url = response["versions"][latest_version]["dist"]["tarball"]
 tgz_local_path = os.path.join(lakehouse_destination, os.path.basename(tgz_url))
-svg_dir = os.path.join(lakehouse_destination, "package/dist/svg/")
-png_dir = os.path.join(lakehouse_destination, "package/dist/png/")
+svg_dir = os.path.join(lakehouse_destination, "package/svg/")
+png_dir = os.path.join(lakehouse_destination, "package/png/")
 
-# DELETE & recreate lakehouse_destination
+# DELETE & recreate lakehouse_destination folder
 if mssparkutils.fs.exists(f"file:{lakehouse_destination}"):
     mssparkutils.fs.rm(f"file:{lakehouse_destination}", True)
 mssparkutils.fs.mkdirs(f"file:{lakehouse_destination}")
